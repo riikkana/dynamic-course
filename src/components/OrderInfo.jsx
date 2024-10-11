@@ -3,7 +3,7 @@
 const OrderInfo = () => {
     
     return (
-        <div>
+        <div className="orderinfo">
             <h1> This is orderinfo </h1>
         </div>
     );

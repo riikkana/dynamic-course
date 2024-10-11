@@ -5,6 +5,7 @@ import './App.css'
 import Header from './components/Header'
 import Product from './components/Product'
 import OrderInfo from './components/OrderInfo'
+import "./style/style.css"
 
 const App = () => {
   const [count, setCount] = useState(0)
