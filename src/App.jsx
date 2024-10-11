@@ -8,13 +8,32 @@ import OrderInfo from './components/OrderInfo'
 import "./style/style.css"
 
 const App = () => {
-  const [count, setCount] = useState(0)
+  const [total, setTotal] = useState(0);
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [quantity, setQuantity] = useState(0);
+
+  const updateTotal = (product, quantity) => {
+    console.log("Selected Product:", product);
+    console.log("Quantity:", quantity);
+
+    if (product && quantity > 0) {
+      const newTotal = product.price * quantity;
+      setTotal(newTotal);
+      setSelectedProduct(product);
+      setQuantity(quantity); 
+      console.log(newTotal)
+    } else {
+      setTotal(0);
+      setSelectedProduct(null);
+      setQuantity(0);
+    }
+  };
 
   return (
       <div>
         <Header />
-        <Product />
-        <OrderInfo />
+        <Product onUpdate={updateTotal} />
+        <OrderInfo product={selectedProduct} quantity={quantity} total={total} />
       </div>
   )
 }

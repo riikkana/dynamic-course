@@ -1,36 +1,54 @@
 
 body {
-    margin: 0;
-    padding: 0;
+    display: flex;
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
     color: #333;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
 
-  header {
-    background-color: #4CAF50;
-    color: white;
+  .header {
+    background-color: white;
+    color: black;
     padding: 20px;
-    text-align: center;
     font-size: 1.5rem;
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;  }
+
+  .logo {
+    width: 100px;
+    height: 100px;
   }
   
 
   .product {
     background-color: #ffffff;
-    border: 1px solid #ddd;
-    padding: 15px;
+    display: "flex"; 
+    align-items: "center";
+    font-size: 20px;
+    /*padding: 15px;
     margin: 15px auto;
     width: 80%;
-    max-width: 600px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 600px;*/
   }
   
+  .quantity {
+    margin: 20px;
+    font-size: 20px;
+  }
+  .quantityButton {
+    background-color: #f1f0f0;
+    border: 1;
+    border-color: black;
+    color: black;
+  }
 
   .orderinfo {
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
     padding: 20px;
     margin: 20px auto;
     width: 80%;
