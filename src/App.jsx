@@ -3,7 +3,9 @@ import './App.css'
 import Header from './components/Header'
 import Product from './components/Product'
 import OrderInfo from './components/OrderInfo'
+import News from './components/News'
 import "./style/style.css"
+
 
 const App = () => {
   const [total, setTotal] = useState(0);
@@ -32,6 +34,7 @@ const App = () => {
         <Header />
         <Product onUpdate={updateTotal} />
         <OrderInfo product={selectedProduct} quantity={quantity} total={total} />
+        <News />
       </div>
   )
 }
