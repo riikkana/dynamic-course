@@ -5,6 +5,10 @@ import Product from './components/Product'
 import OrderInfo from './components/OrderInfo'
 import News from './components/News'
 import "./style/style.css"
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+
+
 
 
 const App = () => {
@@ -29,12 +33,26 @@ const App = () => {
     }
   };
 
+  const myRouter = createBrowserRouter([
+    {
+        path: "/",
+        element: (
+            <>
+                <Header />
+                <Product onUpdate={updateTotal} />
+                <OrderInfo product={selectedProduct} quantity={quantity} total={total} />
+            </>
+        ),
+    },
+    {
+        path: "/news",
+        element: <News />,
+    },
+  ]);
+
   return (
       <div className='maindiv'>
-        <Header />
-        <Product onUpdate={updateTotal} />
-        <OrderInfo product={selectedProduct} quantity={quantity} total={total} />
-        <News />
+        <RouterProvider router={myRouter} />
       </div>
   )
 }

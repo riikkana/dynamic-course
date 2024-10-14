@@ -19,14 +19,43 @@ body {
     border-radius: 5px;
   }
 
-  .header {
+  /*.header {
     background-color: white;
     color: black;
     padding: 20px;
     font-size: 1.5rem;
     display: flex; 
     align-items: center; 
-    justify-content: center;  }
+    justify-content: center;  }*/
+
+    .header {
+      display: flex;
+      flex-direction: column; /* Muutetaan suunta pystysuunnaksi */
+      align-items: center; /* Keskittää kaikki elementit vaakasuunnassa */
+      padding: 20px; /* Lisää tilaa headerille */
+      border-bottom: 2px solid #dee2e6; /* Ohut alareunan viiva */
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center; /* Keskittää logon ja otsikon */
+    margin-bottom: 15px; /* Lisää tilaa logon ja otsikon alapuolelle */
+}
+
+  .logo {
+    height: 50px; /* Määrittele logon korkeus */
+    margin-right: 10px; /* Lisää tilaa logon ja otsikon väliin */
+}
+
+    .nav-links {
+      list-style-type: none; /* Poistaa listan väliin ja pistetyt */
+      display: flex; /* Näyttää navigaatiolinkit vierekkäin */
+      margin-top: 10px; /* Lisää tilaa otsikon ylle */
+  }
+  
+  .nav-links li {
+      margin-left: 20px; /* Lisää tilaa linkkien väliin */
+  } 
 
   .logo {
     width: 100px;
