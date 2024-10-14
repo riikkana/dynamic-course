@@ -30,31 +30,32 @@ body {
 
     .header {
       display: flex;
-      flex-direction: column; /* Muutetaan suunta pystysuunnaksi */
-      align-items: center; /* Keskittää kaikki elementit vaakasuunnassa */
-      padding: 20px; /* Lisää tilaa headerille */
-      border-bottom: 2px solid #dee2e6; /* Ohut alareunan viiva */
+      flex-direction: column; 
+      align-items: center; 
+      padding: 20px; 
+      border-bottom: 2px solid #dee2e6; 
   }
 
   .logo-container {
     display: flex;
-    align-items: center; /* Keskittää logon ja otsikon */
-    margin-bottom: 15px; /* Lisää tilaa logon ja otsikon alapuolelle */
+    align-items: center; 
+    margin-bottom: 15px; 
 }
 
   .logo {
-    height: 50px; /* Määrittele logon korkeus */
-    margin-right: 10px; /* Lisää tilaa logon ja otsikon väliin */
+    height: 50px; 
+    margin-right: 10px; 
 }
 
     .nav-links {
-      list-style-type: none; /* Poistaa listan väliin ja pistetyt */
-      display: flex; /* Näyttää navigaatiolinkit vierekkäin */
-      margin-top: 10px; /* Lisää tilaa otsikon ylle */
+      list-style-type: none; 
+      display: flex; 
+      justify-content: center;
+      margin-top: 10px;
   }
   
   .nav-links li {
-      margin-left: 20px; /* Lisää tilaa linkkien väliin */
+      margin-left: 20px;
   } 
 
   .logo {
