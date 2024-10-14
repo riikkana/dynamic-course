@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Header from './components/Header'
 import Product from './components/Product'
@@ -30,7 +28,7 @@ const App = () => {
   };
 
   return (
-      <div>
+      <div className='maindiv'>
         <Header />
         <Product onUpdate={updateTotal} />
         <OrderInfo product={selectedProduct} quantity={quantity} total={total} />

@@ -41,8 +41,9 @@ const Product = ({ onUpdate }) => {
   };
 
   return (
-    <div className="product">
-      <h3> Select product </h3>
+    <div className="selectProduct">
+      <div className="product">
+      <h2> Select product </h2>
       <label>Product: </label>
       <select onChange={handleChange} value={selectedProduct.id}>
         {products.map((product) => (
@@ -67,6 +68,7 @@ const Product = ({ onUpdate }) => {
           +
         </button>
       </div>
+    </div>
     </div>
   );
 };
