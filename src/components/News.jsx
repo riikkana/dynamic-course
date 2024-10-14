@@ -7,37 +7,45 @@ const api_key = import.meta.env.VITE_NEWS_API_KEY;
 
 const News = () => {
     const [articleDescription, setArticleDescription] = useState("");
+    const [articleUrl, setArticleUrl] = useState("");
+
+
+    const fetchArticle = () => {
+        const address = api_url + api_key;
+
+        axios.get(address)
+            .then(response => {
+                const json = response.data
+                if (json.articles && json.articles.length > 0) {
+                    const randomIndex = Math.floor(Math.random() * json.articles.length);
+                    setArticleDescription(json.articles[randomIndex].description);
+                    const url = json.articles[randomIndex].url;
+                    setArticleUrl(url);
+                    console.log(url)
+                } else {
+                    setArticleDescription("No articles found");
+                }
+            }).catch(error => {
+                alert(error)
+            });
+    };
 
     useEffect(() => {
-        const address = api_url + api_key;
-    
-    axios.get(address)
-        .then(response => {
-            const json = response.data
-            if (json.articles && json.articles.length > 10) {
-                setArticleDescription(json.articles[2].description);
-
-                const url = json.articles[2].url;
-                console.log(url)
+        fetchArticle();
+    }, []);
 
 
-            } else {
-                setArticleDescription("No articles found");
-            }
-        }).catch(error => {
-            alert(error)
-        });
-    }, []); 
-
-
-  return (
-    <div className="news">
-      <h2>Daily news about electricity</h2>
-      <p>This is the article: <span id="news">{articleDescription}</span></p>
-      <p>Read more link</p>
-      <p>Get new article</p>
-    </div>
-  );
+    return (
+        <div className="news">
+            <h2>Daily news about electricity</h2>
+            <p>
+                <span>{articleDescription}
+                    <a href={articleUrl} target="_blank"> Read more here.</a>
+                </span>
+            </p>
+            <button onClick={fetchArticle}>Get new article</button>
+        </div>
+    );
 };
 
 
