@@ -1,6 +1,3 @@
-/*new branch only?*/
-
-
 body {
   display: flex;
   flex-direction: column;
@@ -99,14 +96,11 @@ th,
 td {
   padding: 10px;
   text-align: left;
-  /* Tasaa tekstin vasemmalle */
   border: 1px solid #ddd;
-  /* Lisää reunaviivat soluihin */
 }
 
 th {
   background-color: #f2f2f2;
-  /* Lisää vähän taustaväriä otsikoille */
 }
 
 .news {
