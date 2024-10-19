@@ -86,6 +86,7 @@ select {
   background-color: #ffffff;
   padding: 10px;
   margin: auto;
+  border-bottom: 2px solid #dee2e6;
 }
 
 table {

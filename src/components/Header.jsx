@@ -9,12 +9,6 @@ const Header = () => {
                 <img src={logo} alt="Company logo" className="logo" />
                 <h2> This is my product page! </h2>
             </div>
-            <nav>
-                <ul className="nav-links">
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/news">News</Link></li>
-                </ul>
-            </nav>
         </header>
     );
 };

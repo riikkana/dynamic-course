@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Link } from 'react-router-dom';
 
 const date = new Date();
 date.setDate(date.getDate() - 20);
@@ -46,14 +45,6 @@ const News = () => {
     return (
         <div className="news">
             <h2>Daily news about electricity</h2>
-            
-            <nav>
-                <ul className="nav-links">
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/news">News</Link></li>
-                </ul>
-            </nav>
-
             <p>
                 <span>{articleDescription}
                     <a href={articleUrl} target="_blank"> Read more here.</a>
