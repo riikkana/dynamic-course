@@ -9,7 +9,7 @@ const month = String(date.getMonth() + 1).padStart(2, '0');
 const day = String(date.getDate()).padStart(2, '0');
 
 const formattedDate = `${year}-${month}-${day}`;
-const api_url = 'https://newsapi.org/v2/everything?q=electricity&from=${formattedDate}&sortBy=popularity&apiKey='
+const api_url = `https://newsapi.org/v2/everything?q=electricity&from=${formattedDate}&sortBy=popularity&apiKey=`;
 const api_key = import.meta.env.VITE_NEWS_API_KEY;
 
 const News = () => {
@@ -20,7 +20,11 @@ const News = () => {
     const fetchArticle = () => {
         const address = api_url + api_key;
 
-        axios.get(address)
+        axios.get(address, {
+            headers: {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36'
+            }
+        })
             .then(response => {
                 const json = response.data
                 if (json.articles && json.articles.length > 0) {
@@ -33,7 +37,8 @@ const News = () => {
                     setArticleDescription("No articles found");
                 }
             }).catch(error => {
-                alert(error)
+                console.error('Error fetching articles:', error);
+    alert(`Error: ${error.response ? error.response.data.message : error.message}`);
             });
     };
 
