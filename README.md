@@ -4,4 +4,6 @@ This repository is for Dynamic Webpage -course assignment.
 
 Final version is in this branch "no-router".
 
-- [From here](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) you can access to the final service.
+Note: the page still has "Daily news about electricity" in it. It is the open data part of the work, but the "News-api" used in it doesn't allow api calls from any other origin than localhost.
+
+- [From here](https://www.students.oamk.fi/~n3nari00/Dynamic_Web_Page/) you can access to the final service.
