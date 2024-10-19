@@ -2,7 +2,15 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from 'react-router-dom';
 
-const api_url = 'https://newsapi.org/v2/everything?q=electricity&from=2024-09-14&sortBy=popularity&apiKey='
+const date = new Date();
+date.setDate(date.getDate() - 20);
+
+const year = date.getFullYear();
+const month = String(date.getMonth() + 1).padStart(2, '0'); 
+const day = String(date.getDate()).padStart(2, '0');
+
+const formattedDate = `${year}-${month}-${day}`;
+const api_url = 'https://newsapi.org/v2/everything?q=electricity&from=${formattedDate}&sortBy=popularity&apiKey='
 const api_key = import.meta.env.VITE_NEWS_API_KEY;
 
 const News = () => {

@@ -2,113 +2,113 @@
 
 
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-    border: 1px solid #ddd;
-    /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
-  }
-  
-  .maindiv {
-    background-color: #fdfdfd;
-    border: 1px solid #333;
-    padding: 32px;
-    border-radius: 5px;
-  }
-
-  /*.header {
-    background-color: white;
-    color: black;
-    padding: 20px;
-    font-size: 1.5rem;
-    display: flex; 
-    align-items: center; 
-    justify-content: center;  }*/
-
-    .header {
-      display: flex;
-      flex-direction: column; 
-      align-items: center; 
-      padding: 20px; 
-      border-bottom: 2px solid #dee2e6; 
-  }
-
-  .logo-container {
-    display: flex;
-    align-items: center; 
-    margin-bottom: 15px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  border: 1px solid #ddd;
+  /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
 }
 
-  .logo {
-    height: 50px; 
-    margin-right: 10px; 
+.maindiv {
+  background-color: #fdfdfd;
+  border: 1px solid #333;
+  padding: 32px;
+  border-radius: 5px;
 }
 
-    .nav-links {
-      list-style-type: none; 
-      display: flex; 
-      justify-content: center;
-      margin-top: 10px;
-  }
-  
-  .nav-links li {
-      margin-left: 20px;
-  } 
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 2px solid #dee2e6;
+}
 
-  .logo {
-    width: 100px;
-    height: 100px;
-  }
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin-top: 0;
+}
 
-  .product {
-    background-color: #ffffff;
-    display: "flex"; 
-    align-items: "center";
-  }
-  
-  label {
-    font-size: 20px;
-  }
+.nav-links li {
+  margin-left: 20px;
+}
 
-  select {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 16px;
-  }
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
 
-  .quantity {
-    margin: 15px;
-    font-size: 20px;
-  }
-  .quantityButton {
-    background-color: #f1f0f0;
-    border: 1;
-    border-color: black;
-    color: black;
-  }
+.logo {
+  height: 50px;
+  margin-right: 10px;
+}
 
-  .orderinfo {
-    background-color: #ffffff;
-    padding: 10px;
-    margin: auto;
-  }
 
-  table {
-    margin: auto;
-  }
 
-  th, td {
-    padding: 10px;
-    text-align: left; /* Tasaa tekstin vasemmalle */
-    border: 1px solid #ddd; /* Lisää reunaviivat soluihin */
-  }
+.logo {
+  width: 100px;
+  height: 100px;
+}
 
-  th {
-    background-color: #f2f2f2; /* Lisää vähän taustaväriä otsikoille */
-  }
-  
-  .news {
-    padding-top: 20px;
-  }
+.product {
+  background-color: #ffffff;
+  display: "flex";
+  align-items: "center";
+  border-bottom: 2px solid #dee2e6;
+}
+
+label {
+  font-size: 20px;
+}
+
+select {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+}
+
+.quantity {
+  margin: 15px;
+  font-size: 20px;
+}
+
+.quantityButton {
+  background-color: #f1f0f0;
+  border: 1;
+  border-color: black;
+  color: black;
+}
+
+.orderinfo {
+  background-color: #ffffff;
+  padding: 10px;
+  margin: auto;
+}
+
+table {
+  margin: auto;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  /* Tasaa tekstin vasemmalle */
+  border: 1px solid #ddd;
+  /* Lisää reunaviivat soluihin */
+}
+
+th {
+  background-color: #f2f2f2;
+  /* Lisää vähän taustaväriä otsikoille */
+}
+
+.news {
+  padding-top: 20px;
+}
